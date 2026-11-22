@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: extrasmg-bot
+    env: docker
+    plan: free
+    envVars:
+      - key: BOT_TOKEN
+        sync: false
+      - key: FIREBASE_URL
+        value: https://extrasmg-527cd-default-rtdb.firebaseio.com
+      - key: FIREBASE_SECRET
+        sync: false
+      - key: GROUP_LINK
+        value: https://t.me/ExtraSMG
+      - key: ADMIN_ID
+        sync: false
+      - key: ADMIN_IDS
+        sync: false
+    healthCheckPath: /api/health
